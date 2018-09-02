@@ -10,7 +10,7 @@ app.post('/gh', (req, res) => {
 
   shell.exec('cd /home/video-conferencing');
   shell.exec('git pull origin master');
-  shell.rm('-rf', 'node_modules');
+  // shell.rm('-rf', 'node_modules');
 
   console.log('node_modules removed');
   shell.exec('npm install');
