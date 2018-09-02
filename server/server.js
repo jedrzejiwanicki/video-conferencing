@@ -23,4 +23,4 @@ app.get('*', (req,res) => {
   res.sendFile(path.join(__dirname + '/../dist/video-conferencing/index.html'));
 });
 
-app.listen(1234)
+app.listen(3001)
