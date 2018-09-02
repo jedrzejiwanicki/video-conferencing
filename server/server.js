@@ -6,7 +6,6 @@ const app = express();
 
 app.post('/gh', (req, res) => {
   console.log('Push intercepted, performing repo update');
-  res.status(200).send('OK')
 
   shell.exec('cd /home/video-conferencing');
   shell.exec('git pull origin master');
@@ -20,6 +19,7 @@ app.post('/gh', (req, res) => {
   shell.exec('pm2 restart video-conferencing');
   console.log('process restarted');
 
+  res.status(200).send('OK')
 });
 
 app.use(express.static(path.join(__dirname + '/../dist/video-conferencing/')));
